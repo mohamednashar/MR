@@ -51,7 +51,7 @@ const AuftrageForm = () => {
     <>
       {items.map((item) => {
         return (
-          <Link href={`/Aufrtage/${item.id}`}>
+          <Link key={item.id} href={`/Aufrtage/${item.id}`}>
             <div className="bg-white border-l-4 border-[#0F6583] shadow-md w-[80%] p-5 mx-auto text-[#000000B0] mb-10 ">
               <p className="mb-5">{item.paragraph}</p>
 
