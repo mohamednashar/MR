@@ -1,0 +1,16 @@
+import React from "react";
+
+function page() {
+  return (
+    <div className="bg-white w-[80%] mx-auto p-5 rounded-[10px]">
+
+<label for="message" class="block mb-4 text-gray-900 dark:text-white">Arbeitspapiere zum Personalfall:</label>
+<textarea id="message" rows="13" class=" block p-2.5 w-full text-sm text-gray-900 bg-white rounded-lg border border-gray-300 mb-10" placeholder="Dateien hier hereinziehen oder klicken."></textarea>
+   
+   
+    </div>
+
+  );
+}
+
+export default page;

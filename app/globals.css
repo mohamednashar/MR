@@ -1,0 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body {
+  background-color: #F8F9FA;
+  background-color: #F8F9FA;
+  transform: scale(0.9);
+  transform-origin: top left;
+  width: 111.1111%;
+  /* Adjust the width to compensate for scaling */
+  height: 111.1111%;
+  /* Adjust the height to compensate for scaling */
+  margin: 0;
+  /* Remove default margin to prevent scrolling */
+
+}
+
+
+
+
+
+/*firefox scrollbar*/
+html {
+  scrollbar-color: #3AB3B3 #F5F5F5;
+  scrollbar-width: thin;
+}
+
+/*chrome scrollbar*/
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #3AB3B3;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #3AB3B3;
+}
+
+.selectt {
+  width: 150px;
+
+  font-size: 16px;
+  line-height: 1;
+
+  height: 34px;
+  background: url(http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png) no-repeat right #ffffff;
+  -webkit-appearance: none;
+  background-position-x: 120px;
+}
+
+
+.scrollbar-1 {
+  scrollbar-width: thin;
+  scrollbar-color: #D9D9D9 #F0F0F0;
+}
+
+.scrollbar-1::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.scrollbar-1::-webkit-scrollbar-track {
+  background-clip: content-box;
+
+}
+
+.scrollbar-1::-webkit-scrollbar-thumb {
+  background-color: #c2c2c2;
+}
+
+.scrollbar-1::-webkit-scrollbar-thumb:hover {
+  background-color: #c2c2c2;
+}
+
+.scrollbar-1::-webkit-scrollbar-corner,
+.scrollbar-1::-webkit-scrollbar-track {
+  background-color: #b0b7c4;
+}
+
+.stars svg {
+  width: 30px;
+  height: 30px;
+
+}
+
+aside{
+  height: 350px !important;
+
+}
+
