@@ -46,9 +46,9 @@ function User({ img, name, email }) {
       <button className="flex w-full items-center justify-between bg-white py-2 cursor-default">
         <div className="flex flex-row w-full  border-solid py-2  border-gray-500">
           <Image
-            width={50}
-            height={200}
-            class="inline-block rounded-xl ring-2 ring-white mr-4 "
+           width={200}
+           height={200}
+           class="rounded-[15px] w-[40px] h-[70px] object-cover mr-4"
             src={img}
             alt=""
           />

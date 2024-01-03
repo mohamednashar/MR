@@ -2,7 +2,7 @@ import React from 'react'
 
 const Search = () => {
   return (
-    <form className='w-[60%] mx-auto mb-10'>   
+    <form className='w-[50%] mx-auto mb-10'>   
     <label htmlFor="default-search" className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
     <div className="relative">
       <div className="absolute inset-y-0 end-36 flex items-center ps-3 pointer-events-none">
@@ -12,7 +12,7 @@ const Search = () => {
 </svg>
 
       </div>
-      <input type="search" id="default-search" className="placeholder-[#265E73] text-center block w-full p-4 ps-10 text-sm  border border-gray-300 rounded-[15px] bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Kannst du etwas nicht finden? suche es hier!" required />
+      <input type="search" id="default-search" className="placeholder-[#265E73] bg-white text-center block w-full p-4 ps-10 text-sm  border border-[#E2E8F0] rounded-[15px] focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Kannst du etwas nicht finden? suche es hier!" required />
     </div>
   </form>
   )

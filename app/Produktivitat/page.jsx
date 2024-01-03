@@ -1,11 +1,10 @@
 import React from 'react'
-import Allgemeines from '../Allgemeines/page'
-
+import CardProduktivitat from '../components/CardProduktivitat'
 
 function page() {
   return (
     <div>
-      <Allgemeines/>
+      <CardProduktivitat/>
     </div>
   )
 }

@@ -11,7 +11,7 @@ const CardCalls = () => {
   return (
     <>
     
-    <div className="bg-white p-5 rounded-[15px] w-[85%] mx-auto border-2 border-solid">
+    <div className="bg-white p-5 rounded-[15px] w-[85%] mx-auto">
       
       <div className="flex justify-between border-b-2 pb-5">
       <div >   
@@ -32,7 +32,7 @@ const CardCalls = () => {
         <div className="space-x-8">
           
        
-        <button className="bg-gray-100 text-[#265E73] rounded-xl px-6 py-3">
+        <button className="bg-gray-100 text-[#265E73] rounded-xl px-12 py-3">
         Anrufsverlauf
           </button>
      
@@ -45,21 +45,21 @@ const CardCalls = () => {
 
       <User
         img={
-          "https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+          "https://images.unsplash.com/photo-1564564321837-a57b7070ac4f?q=80&w=2076&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         }
         name={"usama"}
         email={"usamarabie21@gmail.com"}
       />
       <User
         img={
-          "https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+          "https://images.unsplash.com/photo-1564564321837-a57b7070ac4f?q=80&w=2076&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         }
         name={"usama"}
         email={"usamarabie21@gmail.com"}
       />
       <User
         img={
-          "https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+          "https://images.unsplash.com/photo-1564564321837-a57b7070ac4f?q=80&w=2076&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         }
         name={"usama"}
         email={"usamarabie21@gmail.com"}
@@ -67,7 +67,21 @@ const CardCalls = () => {
 
       <User
         img={
-          "https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+          "https://images.unsplash.com/photo-1564564321837-a57b7070ac4f?q=80&w=2076&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        }
+        name={"usama"}
+        email={"usamarabie21@gmail.com"}
+      />
+      <User
+        img={
+          "https://images.unsplash.com/photo-1564564321837-a57b7070ac4f?q=80&w=2076&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        }
+        name={"usama"}
+        email={"usamarabie21@gmail.com"}
+      />
+      <User
+        img={
+          "https://images.unsplash.com/photo-1564564321837-a57b7070ac4f?q=80&w=2076&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         }
         name={"usama"}
         email={"usamarabie21@gmail.com"}

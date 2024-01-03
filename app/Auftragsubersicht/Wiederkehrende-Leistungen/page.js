@@ -2,7 +2,7 @@ import React from 'react'
 
 function WiederkehrendeLeistungen() {
   return(
-    <div className="p-5 w-[80%] mx-auto bg-white mt-5">
+    <div className="">
      <h1 className="text-[#265E73] p-5 font-bold">LEISTUNGEN MONATLICH</h1>  
      <div className="flex items-center justify-between mx-10 bg-[#3AB3B3] w-full md:w-[50%] p-3 rounded-2xl">
       <span className="text-white">Gesamt</span>
@@ -25,12 +25,7 @@ function WiederkehrendeLeistungen() {
       <span className="text-white">1.000,00 €</span>
      </div>
 
-     <div className="flex items-center justify-around mt-24">
-      <span className="text-[#265E73]">Datenschutzerklärung</span>
-      <span className="text-[#265E73]">AGB für Mandanten</span>
-      <span className="text-[#265E73]">Widerrufsbelehrung</span>
-      <span className="text-[#265E73]">Impressum</span>
-     </div>
+     
       </div>
   )
 }

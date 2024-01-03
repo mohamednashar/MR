@@ -1,10 +1,10 @@
 import React from 'react'
-import Allgemeines from '../Allgemeines/page'
+import Email from '../components/Email'
 
-function page() {
+const page = () => {
   return (
     <div>
-      <Allgemeines/>
+        <Email/>
     </div>
   )
 }

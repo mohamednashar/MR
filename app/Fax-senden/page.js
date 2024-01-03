@@ -1,8 +1,11 @@
 import React from 'react'
+import Fax from '../components/Fax'
 
 function page() {
   return (
-    <div>page</div>
+    <div>
+      <Fax/>
+    </div>
   )
 }
 

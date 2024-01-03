@@ -1,7 +1,7 @@
 "use client"
 import React, { useState } from 'react';
 
-const PhoneButton = () => {
+const YourComponent = () => {
   const WIDTH = 50;
   const [bgOffset, setBgOffset] = useState(0);
   const [active, setActive] = useState(0);
@@ -16,7 +16,7 @@ const PhoneButton = () => {
 
   return (
     <div
-    className='mb-7 font-bold'
+    className='mb-7 font-bold text-xl '
       style={{
         display: 'flex',
         justifyContent: 'center',
@@ -24,11 +24,11 @@ const PhoneButton = () => {
      
       }}
     >
-      <div
+      <div className='w-[82%]'
         style={{
           '--bg-offset': `${bgOffset}%`,
           display: 'flex',
-          borderRadius: '20px',
+          borderRadius: '15px',
           overflow: 'hidden',
           position: 'relative',
           background: 'white',
@@ -46,13 +46,13 @@ const PhoneButton = () => {
             left: 'var(--bg-offset)',
             transition: 'left 0.3s',
             zIndex:0,
-            borderRadius:"9999px"
+            borderRadius:"15px"
            
           }}
         ></div>
         <button
           style={{
-            width: '500px',
+            width: '50%',
             border: 'none',
             padding: '0.75rem 1.5rem',
             background: '',
@@ -68,12 +68,11 @@ const PhoneButton = () => {
         </button>
         <button
           style={{
-            width: '500px',
+            width: '50%',
             border: 'none',
             padding: '0.75rem 1.5rem',
             background: 'transparent',
             cursor: 'pointer',
-            borderRight: '1px solid #eee',
             color: active==1? 'white' : '#3AB3B3',
             zIndex:1,
            
@@ -88,4 +87,4 @@ const PhoneButton = () => {
   );
 };
 
-export default PhoneButton;
+export default YourComponent;
