@@ -4,7 +4,7 @@ import PhoneButton from '../components/PhoneButton'
 import UserPostien from '../components/UserPostien'
 import UserPostienKalkulator from '../components/UserPostienKalkulator'
 
-const page = () => {
+const Page = () => {
   const [text , setText]=useState([
                                    "von 8 bis 16 Uhr Durchführung der Finanzbuchhaltung für den Kunden Mostafa Dahi" , 
                                    "Er erstellte die monatlichen Gutachten für das Unternehmen des Kunden, Enas Ahmed"
@@ -75,4 +75,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page
