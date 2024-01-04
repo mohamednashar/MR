@@ -66,7 +66,7 @@ function UserProduktivitat({ img, name, email }) {
       <Collapse open={open}>
         <Card>
           <CardBody>
-          <div className={`w-72 ${selectClicked ? 'pb-20' : ''}`}>
+          <div className={` transition-all duration-500 w-72 ${selectClicked ? 'pb-20' : ''}`}>
                 <Select size="lg"  onClick={() => setSelectClicked(true)} onChange={(e) => handleSelect(e)}>
                 <Option
                   value="Fehlende Unterlagen"

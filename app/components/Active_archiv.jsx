@@ -1,7 +1,7 @@
 "use client"
 import React, { useState } from 'react';
 
-const YourComponent = () => {
+const Active_archiv = () => {
   const WIDTH = 50;
   const [bgOffset, setBgOffset] = useState(0);
   const [active, setActive] = useState(0);
@@ -87,4 +87,4 @@ const YourComponent = () => {
   );
 };
 
-export default YourComponent;
+export default Active_archiv;

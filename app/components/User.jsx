@@ -17,23 +17,34 @@ import {
 import HoverMenu from "./HoverMenu";
 import Modal1 from "./Modal1";
 import Modal2 from "./Modal2";
+import Modal3 from "./Modal3";
 function User({ img, name, email }) {
   const [isModal1Open, setIsModal1Open] = useState(false);
   const [isModal2Open, setIsModal2Open] = useState(false);
+  const [isModal3Open, setIsModal3Open] = useState(false);
 
   const openModal1 = () => {
     setIsModal1Open(true);
     setIsModal2Open(false);
+    setIsModal3Open(false);
   };
 
   const openModal2 = () => {
     setIsModal1Open(false);
     setIsModal2Open(true);
+    setIsModal3Open(false);
+  };
+
+  const openModal3 = () => {
+    setIsModal3Open(true);
+    setIsModal1Open(false);
+    setIsModal2Open(false);
   };
 
   const closeModal = () => {
     setIsModal1Open(false);
     setIsModal2Open(false);
+    setIsModal3Open(false);
   };
 
   const [open, setOpen] = React.useState(false);
@@ -43,7 +54,7 @@ function User({ img, name, email }) {
 
   return (
     <div className="  w-full mx-auto bg-white border-b-2 last:border-b-0">
-      <button className="flex w-full items-center justify-between bg-white py-2 cursor-default">
+      <div className="flex w-full items-center justify-between bg-white py-2 cursor-default">
         <div className="flex flex-row w-full  border-solid py-2  border-gray-500">
           <Image
            width={200}
@@ -88,6 +99,7 @@ function User({ img, name, email }) {
           ) : (
 
             <div className="flex items-center gap-5">
+                <button   onClick={openModal3} className="py-4 px-8 text-white bg-[#3AB3B3] rounded-full">Zuordnung</button>
               
               <svg
                 onClick={openModal1}
@@ -159,6 +171,7 @@ function User({ img, name, email }) {
 
               {isModal1Open && <Modal1 isOpen={true} onClose={closeModal} />}
               {isModal2Open && <Modal2 isOpen={true} onClose={closeModal} />}
+              {isModal3Open && <Modal3 isOpen={true} onClose={closeModal} />}
 
               <svg
                 className="cursor-pointer transition-all duration-200 hover:rotate-180"
@@ -187,10 +200,12 @@ function User({ img, name, email }) {
                   fill="#265E73"
                 />
               </svg>
+
+            
             </div>
           )}
         </div>
-      </button>
+      </div>
 
       <Collapse open={pathname === "/" ? open : false}>
         <Card className="my-4 mx-auto  bg-[#3AB3B3] p-5">

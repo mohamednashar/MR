@@ -1,6 +1,7 @@
+import Link from "next/link";
 import React from "react";
 
-const page = () => {
+const Login = () => {
   return (
     <div>
       <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto h-screen lg:py-0">
@@ -75,9 +76,11 @@ const page = () => {
               </div>
 
               <div>
-                <button className="bg-gray-50 border border-gray-300 text-[#265E739C] font-bold sm:text-sm rounded-full focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                  Anmeldung
-                </button>
+                <Link href="/main">
+                  <button className="bg-gray-50 border border-gray-300 text-[#265E739C] font-bold sm:text-sm rounded-full focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                    Anmeldung
+                  </button>
+                </Link>
               </div>
 
               <div className="flex justify-between px-6">
@@ -101,4 +104,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Login;

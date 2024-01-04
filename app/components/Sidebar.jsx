@@ -21,7 +21,7 @@ import Icon14 from "./icons/Icon14";
 import { LogoIcon } from "../componentsClient/icons";
 const menuItems = [
 
-  { id: 1, label: "Standort", icon: Icon1, link: "/" },
+  { id: 1, label: "Standort", icon: Icon1, link: "/main" },
   {
     id: 2,
     label: "Nachrichten",
@@ -197,12 +197,12 @@ const Sidebar = () => {
                         ? "bg-[#3AB3B3] text-white"
                         : ""
                     } ${
-                      menu.link === "/" &&
+                      menu.link === "/main" &&
                       activeLink.startsWith("/Neuer-Angestellter")
                         ? "bg-[#3AB3B3] text-white"
                         : ""
                     } ${
-                      menu.link === "/" && activeLink.startsWith("/Neukunde")
+                      menu.link === "/main" && activeLink.startsWith("/Neukunde")
                         ? "bg-[#3AB3B3] text-white"
                         : ""
                     }

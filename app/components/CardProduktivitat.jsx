@@ -14,7 +14,7 @@ const CardProduktivitat = () => {
   return (
     <>
 
-    <div className="bg-white p-5 rounded-[15px] w-[85%] mx-auto">
+    <div className="bg-white p-5 rounded-[15px] w-[85%] mx-auto" >
       
     
 

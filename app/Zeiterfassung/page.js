@@ -29,7 +29,7 @@ function Zeiterfassung() {
   }
 
   return (
-    <div className="w-full md:w-[80%] mx-auto p-5 bg-white rounded-[15px]">
+    <div className="w-full  md:w-[80%] mx-auto p-5 bg-white rounded-[15px]">
 
       <div className="flex gap-5 items-center justify-around my-10">
         <div>
