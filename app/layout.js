@@ -21,10 +21,10 @@ export default function RootLayout({ children }) {
           {  path !="/" &&<Sidebar/>}
           {/* {  path !="/login" &&<Sidebar2/>} */}
           
-            <div className="flex flex-col w-full mt-12">
-               {path !="/" && <Search/>   }
-            {children}
-            </div>
+          <div className={`flex flex-col w-full ${path !== '/' ? 'mt-12' : ''}`}>
+  {path !== '/' && <Search />}
+  {children}
+</div>
    
           </div>
         </body>

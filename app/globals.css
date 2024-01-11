@@ -5,16 +5,39 @@
 
 body {
   background-color: #F8F9FA;
-  transform: scale(0.9);
-  transform-origin: top left;
-  width: 111.1111%;
-  /* Adjust the width to compensate for scaling */
-  height: 111.1111%;
-  /* Adjust the height to compensate for scaling */
-  margin: 0;
-  /* Remove default margin to prevent scrolling */
+  
 }
 
+:root {
+  font-size: 8px;
+}
+
+/* Small screens */
+@media (min-width: 640px) {
+  :root {
+    font-size: 9px;
+  }
+}
+
+/* Medium screens */
+@media (min-width: 768px) {
+  :root {
+    font-size: 10px;
+  }
+}
+
+
+@media (min-width: 1366px) {
+  :root {
+    font-size: 11.5px;
+  }
+}
+
+@media (min-width: 1900px) {
+  :root {
+    font-size: 15px;
+  }
+}
 
 
 
@@ -95,5 +118,4 @@ aside{
   height: 350px !important;
 
 }
-
 

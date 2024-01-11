@@ -1,7 +1,6 @@
 "use client"
 import React, { useState } from 'react'
 import PhoneButton from '../components/PhoneButton'
-import UserPostien from '../components/UserPostien'
 import UserPostienKalkulator from '../components/UserPostienKalkulator'
 
 const Page = () => {

@@ -7,7 +7,7 @@ function UserDetails({img , name , email}) {
       <Image
             width={200}
             height={200}
-            class="rounded-[15px] w-[40px] h-[70px] object-cover  mr-4 "
+            class="rounded-[15px] w-[28px] h-[40px] object-cover mr-4 "
             src={img}
             alt=""
           />

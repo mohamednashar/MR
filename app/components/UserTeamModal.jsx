@@ -4,12 +4,12 @@ import Image from "next/image";
 function UserTeamModal({ img, name, email, icon }) {
   return (
     <div className=" w-full mx-auto bg-white border-b-2 last:border-b-0 ">
-      <div className="flex w-full items-center justify-between bg-white py-2 cursor-default">
-        <div className="flex flex-row w-full  border-solid py-2  border-gray-500 ">
+      <div className="flex w-full items-center justify-between bg-white py-2  cursor-default ">
+        <div className="flex flex-row w-full  border-solid  border-gray-500 ">
           <Image
             width={200}
             height={200}
-            class="rounded-[15px] w-[40px] h-[70px] object-cover mr-4"
+            class="rounded-[15px] w-[30px] h-[50px] object-cover mr-4"
             src={img}
             alt=""
           />
@@ -22,7 +22,7 @@ function UserTeamModal({ img, name, email, icon }) {
           </div>
         </div>
 
-        <div className="ml-44">
+        <div className="ml-44 ">
           <div className="flex items-center gap-5">
            
               {icon === "plus" ? (
@@ -49,7 +49,7 @@ function UserTeamModal({ img, name, email, icon }) {
                 </svg>
               ) : icon === "leader" ? (
 
-                <div className="flex items-center gap-6 rounded-full bg-white">
+                <div className="flex items-center gap-6 rounded-full bg-white ">
                   <div className="bg-[#F8F9FA] p-3 rounded-full">
                   <svg
                     width="25"

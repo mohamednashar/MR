@@ -4,13 +4,13 @@ const Fax = () => {
 
 
   return (
-    <div className="bg-white w-[80%] mx-auto shadow-lg rounded-t-lg">
-    <div className="bg-[#3AB3B3] p-2 text-white rounded-t-lg">
+    <div className="bg-white w-[80%] mx-auto shadow-lg rounded-t-lg ">
+    <div className="bg-[#3AB3B3] p-2 text-white rounded-t-lg ">
     Neue Nachricht
     </div>
 
-    <div>
-      <div className="flex">
+    <div className="">
+      <div className="flex ">
       <input
         type="text"
         className="border-b-2 w-full !outline-none p-2"
@@ -23,7 +23,7 @@ const Fax = () => {
       />
       </div>
 
-      <div className="flex">
+      <div className="flex ">
       <input
         type="text"
         className="border-b-2 w-full !outline-none p-2"
@@ -57,14 +57,14 @@ const Fax = () => {
       />
       <input
         type="text"
-        className="border-b-2 w-full !outline-none p-2 border-l-2"
+        className="border-b-2 w-full !outline-none p-2 border-l-2 "
         placeholder="Seitenzahl :"
       />
       </div>
 
       <input
         type="text"
-        className="border-b-2 w-full !outline-none p-2"
+        className="border-b-2 w-full !outline-none p-2 "
         placeholder="Thema  :"
       />
       
@@ -76,7 +76,7 @@ const Fax = () => {
       <textarea
         name=""
         id=""
-        className="w-full !outline-none p-2 h-[500px] resize-none"
+        className="w-full !outline-none p-2  resize-none h-[50vh] "
         
           
       ></textarea>

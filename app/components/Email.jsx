@@ -36,12 +36,12 @@ const Email = () => {
   }, [isEmojiPickerOpen])
 
   return (
-    <div className="bg-white w-[80%] mx-auto shadow-lg rounded-t-lg ">
+    <div className="bg-white w-[80%] mx-auto shadow-lg rounded-t-lg border-2 ">
     <div className="bg-[#3AB3B3] p-2 text-white rounded-t-lg">
     Neue Nachricht
     </div>
 
-    <div>
+    <div className="h-[70vh]">
       <input
         type="text"
         className="border-b-2 w-full !outline-none p-2"
@@ -60,7 +60,7 @@ const Email = () => {
       <textarea
         name=""
         id=""
-        className="w-full !outline-none p-2 h-[600px] resize-none"
+        className="w-full !outline-none p-2 resize-none h-[80%]"
         value={inputValue}
           onChange={(e) => setInputValue(e.target.value)}
           

@@ -8,6 +8,13 @@ const Modal1 = ({ isOpen, onClose }) => {
     
   };
 
+  const handleModalClick = (e) => {
+    // Check if the click occurred outside the inner modal content
+    if (e.target.classList.contains("fixed") ) {
+      onClose();
+    }
+  };
+
   return (
     <AnimatePresence>
       {isOpen && (
@@ -17,6 +24,7 @@ const Modal1 = ({ isOpen, onClose }) => {
           animate="visible"
           exit="hidden"
           variants={modalVariants}
+          onClick={handleModalClick}
         >
           <div
             className="fixed inset-0 transition-opacity"
@@ -34,7 +42,7 @@ const Modal1 = ({ isOpen, onClose }) => {
             transition={{ duration: 0.3 }}
           >
             <motion.div
-              className="bg-[#ECEFF1] text-left overflow-hidden shadow-xl w-2/3 p-5 rounded-[25px]"
+              className="bg-[#ECEFF1] text-left overflow-hidden shadow-xl w-7/12 p-5 rounded-[25px] "
               initial={{ y: -50, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               exit={{ scale: 0.5, opacity: 0, transition: { duration: 0.5, ease: "easeInOut" } }}
@@ -192,17 +200,17 @@ const Modal1 = ({ isOpen, onClose }) => {
 
             
 
-                
-                
-                <div className="flex justify-end mt-5">
+      
+              </div>
+                      
+              <div className="flex justify-end mt-5">
                   <button id="x"
-                    className="rounded-[25px] py-4 px-8 bg-[#3AB3B3] text-white transition-all duration-200 hover:bg-[#329a9a]"
+                    className="rounded-[25px] text-lg py-4 px-8 bg-[#3AB3B3] text-white transition-all duration-200 hover:bg-[#329a9a]"
                     onClick={onClose}
                   >
                     speichern
                   </button>
                 </div>
-              </div>
             </motion.div>
           </motion.div>
         </motion.div>

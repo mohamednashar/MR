@@ -4,7 +4,7 @@ function WiederkehrendeLeistungen() {
   return(
     <div className="">
      <h1 className="text-[#265E73] p-5 font-bold">LEISTUNGEN MONATLICH</h1>  
-     <div className="flex items-center justify-between mx-10 bg-[#3AB3B3] w-full md:w-[50%] p-3 rounded-2xl">
+     <div className="flex items-center justify-between mx-10 bg-[#3AB3B3] w-full md:w-[70%] p-5 rounded-2xl">
       <span className="text-white">Gesamt</span>
       <span className="text-white">0,00€</span>
      </div>
@@ -20,7 +20,7 @@ function WiederkehrendeLeistungen() {
       <span className="text-sm text-[#265E73]">Aufstellung eines Jahresabschlusses (Bilanz und Gewinn- und Verlustrechnung) inkl. betrieblicher Steuererklärungen</span>
      </div>
 
-     <div className="flex items-center justify-between mx-10 bg-[#3AB3B3] w-full md:w-[50%] p-3 rounded-2xl mt-10">
+     <div className="flex items-center justify-between mx-10 bg-[#3AB3B3] w-full md:w-[90%] p-5 rounded-2xl mt-10">
       <span className="text-white">Gesamt</span>
       <span className="text-white">1.000,00 €</span>
      </div>

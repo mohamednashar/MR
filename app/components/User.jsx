@@ -64,7 +64,7 @@ function User({ img, name, email }) {
             alt=""
           />
           <div className="flex flex-col items-start pt-2">
-            <p className="text-[#2D3748] font-bold">{name}</p>
+            <p className="text-[#2D3748] font-bold capitalize">{name}</p>
             <p className="text-[#718096]">{email}</p>
           </div>
         </div>
@@ -207,7 +207,7 @@ function User({ img, name, email }) {
         </div>
       </div>
 
-      <Collapse open={pathname === "/" ? open : false}>
+      <Collapse open={pathname === "/main" ? open : false}>
         <Card className="my-4 mx-auto  bg-[#3AB3B3] p-5">
           <CardBody className="flex bg-white h-6 items-center justify-center rounded-full">
             <HoverMenu

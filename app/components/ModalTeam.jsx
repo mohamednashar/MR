@@ -12,7 +12,7 @@ const ModalTeam = ({ isOpen, onClose }) => {
     <AnimatePresence>
       {isOpen && (
         <motion.div
-          className="fixed inset-0 z-50 mt-20 "
+          className="fixed inset-0 z-50 mt-10"
           initial="hidden"
           animate="visible"
           exit="hidden"
@@ -31,7 +31,7 @@ const ModalTeam = ({ isOpen, onClose }) => {
             transition={{ duration: 0.3 }}
           >
             <motion.div
-              className="bg-[#ECEFF1] shadow-xl rounded-[25px] w-1/2 border-2"
+              className="bg-[#ECEFF1] shadow-xl rounded-[25px] w-7/12 h-[90vh] overflow-y-auto scroll-1"
               initial={{ y: -50, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               exit={{
@@ -105,6 +105,7 @@ const ModalTeam = ({ isOpen, onClose }) => {
                     email={"alexa@simmmple.com"}
                     icon={"plus"}
                   />
+                 
                 </div>
 
 

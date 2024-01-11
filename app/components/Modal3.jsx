@@ -4,23 +4,31 @@ import { motion, AnimatePresence } from "framer-motion";
 import UserDetails from "./UserDetails";
 
 const Modal3 = ({ isOpen, onClose }) => {
+  const handleModalClick = (e) => {
+    // Check if the click occurred outside the inner modal content
+    if (e.target.classList.contains("fixed") ) {
+      onClose();
+    }
+  };
+
   return (
     <AnimatePresence>
       {isOpen && (
         <motion.div
-          className="fixed inset-0 z-50 overflow-hidden"
+          className="fixed inset-0 z-50 overflow-hidden "
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.3 }}
+          onClick={handleModalClick}
         >
           <div
-            className="fixed inset-0 transition-opacity"
+            className="fixed inset-0 transition-opacity "
             aria-hidden="true"
           ></div>
 
           <motion.div
-            className="fixed inset-0 flex items-center justify-center"
+            className="fixed inset-0 flex items-center justify-center "
             role="dialog"
             aria-modal="true"
             aria-labelledby="modal-headline"
@@ -30,7 +38,7 @@ const Modal3 = ({ isOpen, onClose }) => {
             transition={{ duration: 0.3 }}
           >
             <motion.div
-              className="bg-[#ECEFF1] text-left overflow-hidden h-[950px] shadow-xl w-[1000px] p-5 rounded-[25px]"
+              className="bg-[#ECEFF1] text-left  shadow-xl w-7/12 p-5 rounded-[25px]"
               initial={{ y: -50, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               exit={{ y: 50, opacity: 0 }}
@@ -72,6 +80,15 @@ const Modal3 = ({ isOpen, onClose }) => {
                       "https://images.unsplash.com/photo-1564564321837-a57b7070ac4f?q=80&w=2076&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                     }
                   />
+                     <UserDetails
+                    name={"Usama Rabie"}
+                    email={"usamarabie21@gmail.com"}
+                    img={
+                      "https://images.unsplash.com/photo-1564564321837-a57b7070ac4f?q=80&w=2076&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    }
+                  />
+                  
+                 
                 </div>
 
                 <div className="mt-5 mb-10 p-5 flex flex-col ">

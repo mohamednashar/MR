@@ -6,7 +6,7 @@ import LeaderTeamleitung from "./LeaderTeamleitung";
 const CardTeamleitung = () => {
   return (
     <>
-      <div className="bg-white p-5 rounded-[15px] w-[85%] mx-auto shadow-sm">
+      <div className="bg-white p-5 rounded-[15px] w-[85%] mx-auto shadow-sm ">
         <div className="border-b-2 py-2">
           <p className="text-[#156585] text-xl pb-4">Teamleitung</p>
         </div>

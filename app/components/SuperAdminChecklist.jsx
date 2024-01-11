@@ -42,7 +42,7 @@ function SuperAdminChecklist() {
   };
 
   return (
-    <div className="w-[80%] flex flex-col bg-white mx-auto p-5 rounded-[15px] min-h-[800px]">
+    <div className="w-[80%] flex flex-col bg-white mx-auto p-5 rounded-[15px] h-[80vh] shadow-lg">
       {checkListItems.map((item) => (
         <div key={item.email} className="border-b-2 last:border-none">
           <UserDetails

@@ -13,7 +13,7 @@ const Card = () => {
 
   return (
     <>
-      <div className="bg-white p-5 rounded-[15px] w-[85%] mx-auto shadow-md">
+      <div className="bg-white p-5 rounded-[15px] w-[85%] mx-auto shadow-md mb-14">
         <div className="flex justify-between border-b-2 pb-5">
           <select
             className="bg-white border-2 border-gray-200 rounded-full p-3  py-1 selectt"

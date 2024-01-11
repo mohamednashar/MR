@@ -50,7 +50,7 @@ function UserPostienKalkulator({ img, name, email, time, text }) {
 
       <Collapse open={open}>
         <div className="mb-10">
-          <p className="text-[#265E73] text-xl mx-24">{time}</p>
+          <p className="text-[#265E73] text-xl mx-28">{time}</p>
           {text.map((item) => {
             return (
               <div key={item} className="flex items-center gap-8 mx-10">

@@ -20,13 +20,12 @@ import Icon14 from "./icons/Icon14";
 
 import { LogoIcon } from "../componentsClient/icons";
 const menuItems = [
-
   { id: 1, label: "Standort", icon: Icon1, link: "/main" },
   {
     id: 2,
     label: "Nachrichten",
     icon: Icon2,
-    
+
     subMenu: [
       { id: 21, label: "Posteingang", link: "/Nachrichten/Posteingang" },
       { id: 22, label: " Erledigt", link: "/Nachrichten/Erledigt" },
@@ -58,15 +57,14 @@ const Sidebar = () => {
 
   const router = useRouter();
 
-
   const activeMenu = useMemo(
     () =>
       menuItems.find((menu) => menu.link === router.pathname) || menuItems[0], // Use the first item as a default
     [router.pathname]
   );
   const wrapperClasses =
-    "sticky top-0 h-[111.111vh] overflow-y-auto scrollbar-1 px-4 pb-4 bg-light flex justify-between flex-col " +
-    (toggleCollapse ? "w-24" : "w-80 ");
+    "sticky top-0 h-screen overflow-y-auto scrollbar-1 px-4 pb-4 bg-light flex justify-between flex-col " +
+    (toggleCollapse ? "w-24" : "w-[235px] ");
 
   const collapseIconClasses = !toggleCollapse
     ? "p-4 rounded absolute right-0 mt-12 "
@@ -87,9 +85,19 @@ const Sidebar = () => {
   const path = usePathname();
   let activeLink = path.slice(0);
 
+  const [showNachrichtenSubMenu, setShowNachrichtenSubMenu] = useState(false);
+
+  const handleMouseEnterNachrichten = () => {
+    setShowNachrichtenSubMenu(true);
+  };
+
+  const handleMouseLeaveNachrichten = () => {
+    setShowNachrichtenSubMenu(false);
+  };
+
   return (
     <div
-      className={wrapperClasses +" "}
+      className={wrapperClasses + " "}
       onMouseEnter={onMouseOver}
       onMouseLeave={onMouseOver}
       style={{ transition: "width 300ms cubic-bezier(0.2, 0, 0, 1) 0s" }}
@@ -97,28 +105,33 @@ const Sidebar = () => {
       <div className="flex flex-col">
         <div className="flex items-center justify-between relative ">
           <div className="flex items-center pl-1 gap-4 border-b-2 pb-2 mt-2">
-            <button  onClick={handleSidebarToggle}> <LogoIcon  /></button>
-           
+            <button onClick={handleSidebarToggle}>
+              {" "}
+              <LogoIcon />
+            </button>
+
             {!toggleCollapse && (
               <p className="text-[#156585] font-semibold text-sm">
                 MR Finconsulting GmbH
               </p>
             )}
           </div>
-        
         </div>
 
-        <div className="flex flex-col items-start mt-3">
+        <div className="flex flex-col items-start mt-3 ">
           {menuItems.map(({ icon: Icon, subMenu, ...menu }, index) => {
             const classes = getNavItemClasses(menu);
             return (
-              <div key={index} className="relative w-full">
+              <div key={index} className="relative w-full ">
                 {subMenu ? (
-                  
                   // Render submenu
-                  <div className="relative group w-full ">
+                  <div
+                    className="relative group w-full "
+                    onMouseEnter={handleMouseEnterNachrichten}
+                    onMouseLeave={handleMouseLeaveNachrichten}
+                  >
                     <div
-                      className={`text-[#265E73] flex items-center h-12 px-3 mt-2 rounded-[15px] cursor-pointer group ${
+                      className={`text-[#265E73] flex items-center h-12 px-3 mt-2 rounded-[15px] cursor-pointer group  ${
                         activeLink === menu.link && !toggleCollapse
                           ? "bg-[#3AB3B3] text-white"
                           : ""
@@ -127,7 +140,11 @@ const Sidebar = () => {
                           ? "transition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-md"
                           : "border-none"
                       }
-                      ${path.startsWith("/Nachrichten")? "bg-[#3AB3B3] text-white":""}
+                      ${
+                        path.startsWith("/Nachrichten")
+                          ? "bg-[#3AB3B3] text-white"
+                          : ""
+                      }
                       
                       `}
                     >
@@ -150,13 +167,20 @@ const Sidebar = () => {
                         </span>
                       )}
                     </div>
-                    <div className="">
-                      {!toggleCollapse &&
+                    <div
+                      className={`transform scale-y-0 transition-transform duration-300 origin-top ${
+                        showNachrichtenSubMenu && !toggleCollapse
+                          ? "scale-y-100"
+                          : ""
+                      }`}
+                    >
+                      {showNachrichtenSubMenu &&
+                        !toggleCollapse &&
                         subMenu.map((submenuItem) => (
                           <Link
                             key={submenuItem.id}
                             href={submenuItem.link}
-                            className={`text-sm hover:border-[1px] hover:rounded-[15px] w-[128px] flex flex-col py-1 mb-3 ml-10 pl-4 text-[#265E739C] last:mb-0 mt-3 ${
+                            className={` text-sm hover:border-[1px] hover:rounded-[15px] w-[128px] flex flex-col py-1 mb-3 ml-10 pl-4 text-[#265E739C] last:mb-0 mt-3 ${
                               activeLink === submenuItem.link
                                 ? "border-[1px] border-[#D9D9D9] rounded-[15px]"
                                 : ""
@@ -173,11 +197,8 @@ const Sidebar = () => {
                 ) : (
                   // Render regular menu item
                   <Link
-                  
                     key={index}
                     href={menu.link}
-                    
-                    
                     className={`flex items-center w-full h-12 px-3 mt-2 rounded-[15px] text-[#265E73] ${
                       activeLink === menu.link && !toggleCollapse
                         ? "bg-[#3AB3B3] text-white"
@@ -202,13 +223,15 @@ const Sidebar = () => {
                         ? "bg-[#3AB3B3] text-white"
                         : ""
                     } ${
-                      menu.link === "/main" && activeLink.startsWith("/Neukunde")
+                      menu.link === "/main" &&
+                      activeLink.startsWith("/Neukunde")
                         ? "bg-[#3AB3B3] text-white"
                         : ""
                     }
 
                     ${
-                      menu.link === "/Nachrichten" && activeLink.startsWith("/Nachrichten")
+                      menu.link === "/Nachrichten" &&
+                      activeLink.startsWith("/Nachrichten")
                         ? "bg-[#3AB3B3] text-white"
                         : ""
                     }
@@ -216,10 +239,7 @@ const Sidebar = () => {
 
 
                     `}
-                    
                   >
-                    
-                    
                     {/* Link content */}
                     <div
                       id="x"
