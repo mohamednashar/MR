@@ -3,7 +3,7 @@ import React from "react";
 
 function Rechnungen() {
   return (
-    <div className="w-[80%] m-4 bg-white mx-auto ">
+    <div className="w-[80%] h-[60vh] m-4 bg-white mx-auto ">
       <div className="flex items-center gap-5 justify-between bg-[#F8F9FA] p-4 my-5">
         <div className="flex items-center gap-16">
           <Link href="#" className="text-[#3AB3B3] font-semibold">Rechnungsdatum</Link>

@@ -33,11 +33,11 @@ export default function RootLayout({ children }) {
             }`}
             href={href}
           >
-            <div className="relative">
+            <div className="relative mb-5">
               {activeLink === `Neuer-Angestellter/${href}` && (
                 <motion.div
                   layoutId="underline"
-                  className={`absolute bottom-0 left-0 w-full h-[2px] bg-[#3AB3B3] ${
+                  className={`absolute top-7 left-0 w-full h-[8px] bg-[#3AB3B3] ${
                     activeLink === `Neuer-Angestellter/${href}`
                       ? ""
                       : "opacity-0"

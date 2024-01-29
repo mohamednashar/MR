@@ -2,7 +2,7 @@ import React from "react";
 
 function page() {
   return (
-    <div className="bg-white w-[80%] mx-auto p-5 rounded-[10px]">
+    <div className="bg-white w-[80%] mx-auto  h-[65vh] p-5 rounded-[10px]">
 
       <div className="flex items-center pb-5 border-b-2 mb-7">
         <label for="Steuemummer" class="mb-2 text-sm mr-5  w-[150px] text-center">

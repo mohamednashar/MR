@@ -24,7 +24,7 @@ export default function RootLayout({ children }) {
 
   return (
     <div className="">
-      <div className="flex gap-5 items-center justify-between w-[80%] mx-auto mb-5">
+      <div className="flex  bg-white gap-5 items-center justify-between w-[80%] mx-auto p-8 shadow-lg ">
         {links.map(({ href, label }) => (
           <Link
             key={href}
@@ -35,7 +35,7 @@ export default function RootLayout({ children }) {
               {activeLink === `Neukunde/${href}` && (
                 <motion.div
                   layoutId="underline"
-                  className={`absolute bottom-0 left-0 w-full h-[2px] bg-[#3AB3B3] ${
+                  className={`absolute top-8 left-0 w-full h-[8px]  bg-[#3AB3B3] ${
                     activeLink === `Neukunde/${href}`
                       ? ""
                       : "opacity-0"

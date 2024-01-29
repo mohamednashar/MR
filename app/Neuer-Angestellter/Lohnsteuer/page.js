@@ -2,7 +2,7 @@ import React from "react";
 
 function Lohnsteuer() {
   return (
-    <div className="bg-white w-[80%] mx-auto p-5 rounded-[10px]">
+    <div className="bg-white w-[80%] h-[65vh] mx-auto p-5 rounded-[10px]">
 
       
 

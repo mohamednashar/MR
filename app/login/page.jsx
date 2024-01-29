@@ -32,7 +32,7 @@ const Login = () => {
 
       <div className="flex flex-col items-center justify-center">
         
-        <div className="w-full h-[400px] rounded-[40px] shadow dark:border md:mt-0 sm:max-w-md xl:p-0 bg-[#3AB3B3] ">
+        <div className="w-full h-[55vh] rounded-[40px] shadow dark:border md:mt-0 sm:max-w-md xl:p-0 bg-[#3AB3B3] ">
           <div className="p-6 space-y-4 md:space-y-6 sm:p-8 ">
             <h1 className="text-xl font-bold leading-tight tracking-tight text-[#265E739C] md:text-2xl mb-16 ">
               Anmelden

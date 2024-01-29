@@ -2,7 +2,7 @@ import React from "react";
 
 const Appointment = () => {
   return (
-    <div className="bg-white mx-auto w-[90%] p-2 shadow-md rounded-lg">
+    <div className="bg-white mx-auto w-[90%]  p-2 shadow-md rounded-lg">
       <h1 className="text-[#265E73] mb-8">Beratungstermin anfragen</h1>
 
       <div className="mb-6">
@@ -59,8 +59,8 @@ const Appointment = () => {
         </label>
         <textarea
           id="message"
-          rows="6"
-          class="block p-2.5 w-full text-sm text-gray-900 rounded-lg border border-gray-300 "
+          rows="12"
+          class="block p-2.5 w-full text-sm  text-gray-900 rounded-lg border border-gray-300 "
           placeholder="Teilen Sie uns mit zu welchen Themen Sie eine Beratung wünschen..."
         ></textarea>
       </div>

@@ -36,7 +36,7 @@ const menuItems = [
     id: 3,
     label: "Nachricht schreiben",
     icon: Icon3,
-    link: "/Nachricht-schreiben",
+    link: "/email",
   },
   { id: 4, label: "Fax senden", icon: Icon4, link: "/Fax-senden" },
   { id: 5, label: "Checklisten", icon: Icon5, link: "/Checklisten" },
@@ -56,6 +56,7 @@ const Sidebar = () => {
   const [isCollapsible, setIsCollapsible] = useState(false);
 
   const router = useRouter();
+
 
   const activeMenu = useMemo(
     () =>
@@ -104,7 +105,7 @@ const Sidebar = () => {
     >
       <div className="flex flex-col">
         <div className="flex items-center justify-between relative ">
-          <div className="flex items-center pl-1 gap-4 border-b-2 pb-2 mt-2">
+          <div className="flex items-center pl-1 gap-2 border-b-2 pb-2 mt-2">
             <button onClick={handleSidebarToggle}>
               {" "}
               <LogoIcon />
@@ -208,8 +209,8 @@ const Sidebar = () => {
                         ? "transition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-md"
                         : "border-none"
                     } ${
-                      menu.link === "/Nachricht-schreiben/Finanzbuchhaltung" &&
-                      activeLink.startsWith("/Nachricht-schreiben")
+                      menu.link === "/email" &&
+                      activeLink.startsWith("/email")
                         ? "bg-[#3AB3B3] text-white"
                         : ""
                     } ${

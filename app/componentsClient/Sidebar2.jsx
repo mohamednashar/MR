@@ -99,28 +99,32 @@ const Sidebar2 = () => {
     >
       <div className="flex flex-col">
         <div className="flex items-center justify-between relative ">
-          <div className="flex items-center pl-1 gap-4">
-            <LogoIcon />
-          </div>
-          {isCollapsible && (
-            <button 
-              className={collapseIconClasses}
-              onClick={handleSidebarToggle}
-            >
-              <CollapsIcon />
+        <div className="flex items-center pl-1 gap-4 border-b-2 pb-2 mt-2">
+            <button onClick={handleSidebarToggle}>
+              {" "}
+              <LogoIcon />
             </button>
-          )}
+
+            {!toggleCollapse && (
+              <p className="text-[#156585] font-semibold text-sm">
+                MR Finconsulting GmbH
+              </p>
+            )}
+          </div>
+          
         </div>
         
         <div className="flex flex-col items-start">
 
-        <div className="flex justify-center items-center gap-4">
+        <div className="flex justify-center m-3 items-center gap-4">
+        
               <Image
                 src="https://images.unsplash.com/photo-1615109398623-88346a601842?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 width={50}
                 height={50}
                 className="rounded-full w-12 h-12 object-cover"
-              ></Image>
+              />
+            
 
               {!toggleCollapse&&<p className="font-bold text-[#265E73]">Mohamed Alaa</p>}
 
@@ -134,9 +138,9 @@ const Sidebar2 = () => {
               <Link
                 key={index}
                 href={menu.link}
-                className={`flex items-center w-full h-12 px-3  hover:border-2 border-[#4FD1C5] ${
+                className={`flex items-center w-full h-14 px-3 text-[#265E73]   ${
                   activeLink === menu.link && !toggleCollapse
-                    ? "bg-[#3AB3B3] text-white"
+                    ? "border-2 border-[#3AB3B3]"
                     : ""
                 } mt-2 rounded-[15px] text-[#265E73 
 
@@ -144,25 +148,30 @@ const Sidebar2 = () => {
 
                 ${
                   menu.link==="/Neukunde/Allgemeine-Angaben"&&activeLink.startsWith("/Neukunde")
-                  ? "bg-[#3AB3B3] text-white"
+                  ? "border-2 border-[#3AB3B3]"
                   : ""
+                }
+                ${
+                  !toggleCollapse
+                    ? "transition-all  duration-300 ease-in-out transform hover:scale-105 hover:shadow-md"
+                    : "border-none"
                 }
 
                 ${
                   menu.link==="/Auftragsubersicht/Wiederkehrende-Leistungen" &&activeLink.startsWith("/Auftragsubersicht")
-                  ? "bg-[#3AB3B3] text-white"
+                  ? "border-2 border-[#3AB3B3]"
                   : ""
                 }
 
                 ${
                   menu.link==="/ClientChecklisten/Finanzbuchhaltung" &&activeLink.startsWith("/ClientChecklisten")
-                  ? "bg-[#3AB3B3] text-white"
+                  ? "border-2 border-[#3AB3B3]"
                   : ""
                 }
 
                 ${
                   menu.link==="/Nachricht-schreiben/Finanzbuchhaltung" &&activeLink.startsWith("/Nachricht-schreiben")
-                  ? "bg-[#3AB3B3] text-white"
+                  ? "border-2 border-[#3AB3B3]"
                   : ""
                 }
 
@@ -171,11 +180,11 @@ const Sidebar2 = () => {
               >
                 <div
                   id="x"
-                  className={`bg-white p-2 rounded-[12px] mr-2  ${
+                  className={` p-2 rounded-[12px] mr-2  ${
                     
                     index === 0
                       ? "first:bg-[#4FD1C5] p-2 rounded-[12px]"
-                      : "bg-white p-2 rounded-[12px]  "
+                      : " p-2 rounded-[12px]  "
                   }
 
                   ${toggleCollapse&& activeLink === menu.link ? "border-2 border-[#4FD1C5]" : ""  }`
