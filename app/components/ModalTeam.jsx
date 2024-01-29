@@ -8,20 +8,23 @@ const ModalTeam = ({ isOpen, onClose }) => {
     visible: { opacity: 1 },
   };
 
+
   return (
     <AnimatePresence>
       {isOpen && (
         <motion.div
-          className="fixed inset-0 z-50 mt-10"
+        
+          className="fixed inset-0 z-50 mt-10 "
           initial="hidden"
           animate="visible"
           exit="hidden"
           variants={modalVariants}
+    
         >
          
 
           <motion.div
-            className=" flex items-center justify-center "
+            className=" flex items-center justify-center"
             role="dialog"
             aria-modal="true"
             aria-labelledby="modal-headline"
@@ -29,17 +32,20 @@ const ModalTeam = ({ isOpen, onClose }) => {
             animate={{ scale: 1, opacity: 1 }}
             exit={{ scale: 0.5, opacity: 0 }}
             transition={{ duration: 0.3 }}
+            
           >
             <motion.div
-              className="bg-[#ECEFF1] shadow-xl rounded-[25px] w-7/12 h-[90vh] overflow-y-auto scroll-1"
+              className="bg-[#ECEFF1] shadow-xl rounded-[25px] w-7/12 h-[90vh] overflow-y-auto scrollbar-1"
               initial={{ y: -50, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               exit={{
                 scale: 0.5,
                 opacity: 0,
                 transition: { duration: 0.5, ease: "easeInOut" },
+                
               }}
               transition={{ duration: 0.3 }}
+              __
             >
               <h1 className="text-center text-[#7B838B] text-xl mb-5 font-semibold mt-4">
                 Team 1
@@ -118,7 +124,7 @@ const ModalTeam = ({ isOpen, onClose }) => {
 
 
 
-                <div className="flex justify-end p-10 ">
+                <div className="flex justify-end p-10">
                   <button
                     id="x"
                     className="rounded-[25px] py-4 px-8 bg-[#3AB3B3] text-white transition-all duration-200 hover:bg-[#329a9a]"

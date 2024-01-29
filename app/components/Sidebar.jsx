@@ -64,7 +64,7 @@ const Sidebar = () => {
   );
   const wrapperClasses =
     "sticky top-0 h-screen overflow-y-auto scrollbar-1 px-4 pb-4 bg-light flex justify-between flex-col " +
-    (toggleCollapse ? "w-24" : "w-[235px] ");
+    (toggleCollapse ? "w-24" : "w-[21rem]");
 
   const collapseIconClasses = !toggleCollapse
     ? "p-4 rounded absolute right-0 mt-12 "
@@ -149,7 +149,7 @@ const Sidebar = () => {
                       `}
                     >
                       <div
-                        className={`p-2 rounded-[12px] mr-2 ${
+                        className={`p-2 rounded-[12px] w- mr-2 ${
                           index === 0
                             ? "first:bg-[#4FD1C5] p-2 rounded-[12px]"
                             : "bg-white p-2 rounded-[12px]"
