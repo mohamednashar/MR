@@ -3,7 +3,7 @@ import React from "react";
 
 const Login = () => {
   return (
-    <div className="">
+    <div className="p-7">
       <div className="inline-block">
         <div className="text-center ">
           <svg
