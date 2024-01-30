@@ -51,8 +51,8 @@ const AuftrageForm = () => {
     <>
       {items.map((item) => {
         return (
-          <Link key={item.id} href={`/Aufrtage/${item.id}`}>
-            <div className="bg-white border-l-4 border-[#0F6583] shadow-md w-[80%] p-5 mx-auto text-[#000000B0] mb-10 ">
+
+            <div className="bg-white border-l-4 border-[#0F6583] shadow-md w-[80%] p-5 mx-auto text-[#000000B0] mb-10 font-bold text-lg">
               <p className="mb-5">{item.paragraph}</p>
 
               <div className="flex gap-4 justify-end">
@@ -77,7 +77,7 @@ const AuftrageForm = () => {
                 ></Image>
               </div>
             </div>
-          </Link>
+         
         );
       })}
     </>

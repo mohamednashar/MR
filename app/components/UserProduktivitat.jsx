@@ -25,11 +25,11 @@ function UserProduktivitat({ img, name, email }) {
   return (
     <div className="w-full mx-auto bg-white border-b-2 last:border-b-0">
       <div className="flex w-full items-center justify-between bg-white py-2 cursor-default">
-        <div className="flex flex-row w-full  border-solid py-2  border-gray-500">
-          <Image
-            width={50}
-            height={200}
-            class="inline-block rounded-xl ring-2 ring-white mr-4 "
+        <div className="flex flex-row w-full  border-solid py-2  border-gray-500 ic">
+        <Image
+           width={200}
+           height={200}
+           class="rounded-[15px] w-[40px] h-[70px] object-cover mr-4"
             src={img}
             alt=""
           />
@@ -65,12 +65,12 @@ function UserProduktivitat({ img, name, email }) {
 
       <Collapse open={open}>
         <Card>
-          <CardBody>
-          <div className={` transition-all duration-500 w-72 ${selectClicked ? 'pb-20' : ''}`}>
-                <Select size="lg"  onClick={() => setSelectClicked(true)} onChange={(e) => handleSelect(e)}>
+          <CardBody className="mb-14">
+          <div className={` transition-all duration-500 w-[450px] rounded-full ${selectClicked ? 'pb-20' : ''}`}>
+                <Select  onClick={() => setSelectClicked(true)} onChange={(e) => handleSelect(e)}>
                 <Option
                   value="Fehlende Unterlagen"
-                  className="flex items-center gap-2 text-black hover:text-[white] hover:bg-[#3AB3B3]"
+                  className="flex items-center gap-2 text-black hover:text-[white] hover:bg-[#3AB3B3] mb-2"
                 >
                   <div className="flex gap-2 ">
                     <span className="text-[#3AB3B3] mx-3 rounded-full bg-[#ECECEC]">A R</span>
@@ -81,9 +81,9 @@ function UserProduktivitat({ img, name, email }) {
 
                 <Option
                   value=" Unterlagen Fehlende"
-                  className="flex items-center gap-2 text-black hover:text-[white] hover:bg-[#3AB3B3]"
+                  className="flex items-center gap-2 text-black hover:text-[white] hover:bg-[#3AB3B3]  mb-2"
                 >
-                  <div className="flex gap-2 ">
+                  <div className="flex gap-2">
                     <span className="text-[#3AB3B3] mx-3 rounded-full bg-[#ECECEC]">U R</span>
                     <span className=""> Unterlagen Fehlende</span>
                   </div>

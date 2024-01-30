@@ -57,9 +57,9 @@ function User({ img, name, email }) {
       <div className="flex w-full items-center justify-between bg-white py-2 cursor-default">
         <div className="flex flex-row w-full  border-solid py-2  border-gray-500">
           <Image
-           width={200}
-           height={200}
-           class="rounded-[15px] w-[40px] h-[70px] object-cover mr-4"
+            width={200}
+            height={200}
+            class="rounded-[15px] w-[40px] h-[70px] object-cover mr-4"
             src={img}
             alt=""
           />
@@ -97,10 +97,19 @@ function User({ img, name, email }) {
               />
             </svg>
           ) : (
-
             <div className="flex items-center gap-5">
-                <button   onClick={openModal3} className="py-4 px-8 text-white bg-[#3AB3B3] rounded-full">Zuordnung</button>
-              
+              <button
+                onClick={openModal3}
+                className={` 
+              ${
+                isModal3Open
+                  ? "transition-all duration-200 py-4 px-8 text-white bg-[#3AB3B3] rounded-3xl border border-[#3AB3B3]"
+                  : "transition-all duration-200 py-4 px-8 text-black bg-white rounded-3xl border border-[#265E739C]"
+              }`}
+              >
+                Zuordnung
+              </button>
+
               <svg
                 onClick={openModal1}
                 class="cursor-pointer text-[#3AB3B3] transition-all duration-200 hover:rotate-90"
@@ -200,16 +209,17 @@ function User({ img, name, email }) {
                   fill="#265E73"
                 />
               </svg>
-
-            
             </div>
           )}
         </div>
       </div>
 
-      <Collapse open={pathname === "/main" ? open : false}>
-        <Card className="my-4 mx-auto  bg-[#3AB3B3] p-5">
-          <CardBody className="flex bg-white h-6 items-center justify-center rounded-full">
+      <Collapse
+        className="w-[90%] mx-auto"
+        open={pathname === "/main" ? open : false}
+      >
+        <Card className="my-4 mx-auto  bg-[#3AB3B3] p-5 ">
+          <CardBody className="flex bg-white h-14 items-center justify-between rounded-full ">
             <HoverMenu
               title={"Kommunikation"}
               menuItems={[
@@ -237,7 +247,13 @@ function User({ img, name, email }) {
 
             <HoverMenu
               title={"Verlauf (Kunden Historie)"}
-              menuItems={["→ Nachrichten Verlauf", "→ Unterlagen Verlauf"]}
+              menuItems={[
+                "→ Nachrichten Verlauf",
+                "→ Unterlagen Verlauf",
+                "→ Rechnung",
+                "→ Mandatsvertrag",
+                "→ eine Vollmacht",
+              ]}
             />
 
             <HoverMenu

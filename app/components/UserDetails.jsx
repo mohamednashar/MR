@@ -1,10 +1,14 @@
+"use client"
 import Image from 'next/image'
+import { usePathname } from 'next/navigation'
 import React from 'react'
 
+
+
 function UserDetails({img , name , email}) {
+  const pathname=usePathname()
   return (
-    <div className="border-b-2 items-center last:border-none pb-3 flex flex-row w-full   py-2 ">
-      <Image
+<div className={`items-center ${pathname !== "/Checklisten" ? 'border-b-2' : ''} last:border-none pb-3 flex flex-row w-full py-2`}>      <Image
             width={200}
             height={200}
             class="rounded-[15px] w-[28px] h-[40px] object-cover mr-4 "

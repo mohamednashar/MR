@@ -1,11 +1,11 @@
-"use client"
+"use client";
 import React, { useState } from "react";
 import UserDetails from "./UserDetails";
 
 const checkListItems = [
   {
-    img: "https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-    name: "usama",
+    img: "https://images.unsplash.com/photo-1564564321837-a57b7070ac4f?q=80&w=2076&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    name: "Usama Rabie",
     email: "usamarabie21@gmail.com",
     checkList: [
       "Build prototypes without code1",
@@ -15,8 +15,8 @@ const checkListItems = [
     ],
   },
   {
-    img: "https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-    name: "usama",
+    img: "https://images.unsplash.com/photo-1564564321837-a57b7070ac4f?q=80&w=2076&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    name: "Usama Rabie",
     email: "usamarabie21@gmail.com",
     checkList: [
       "Build prototypes without code1",
@@ -28,42 +28,84 @@ const checkListItems = [
 ];
 
 function SuperAdminChecklist() {
-  const [checkedItems, setCheckedItems] = useState([]);
-
-  const handleCheckboxChange = (event) => {
-    const item = event.target.value;
-    if (event.target.checked) {
-      setCheckedItems((prevCheckedItems) => [...prevCheckedItems, item]);
-    } else {
-      setCheckedItems((prevCheckedItems) =>
-        prevCheckedItems.filter((checkedItem) => checkedItem!== item)
-      );
-    }
-  };
+ 
 
   return (
     <div className="w-[80%] flex flex-col bg-white mx-auto p-5 rounded-[15px] h-[80vh] shadow-lg">
-      {checkListItems.map((item) => (
-        <div key={item.email} className="border-b-2 last:border-none">
-          <UserDetails
-            img={item.img}
-            name={item.name}
-            email={item.email}
-          />
-          <div className="flex flex-col gap-3 p-5 ">
-            {item.checkList.map((label, index) => (
-              <label key={index} className="border-b-2 last:border-none">
-                <input
-                className="mr-3 "
-                  type="checkbox"
-                  value={item.checkList[index]}
-                  checked={checkedItems.includes(item.checkList[index])}
-                  onChange={handleCheckboxChange}
-                />
-                {label}
+      <div className=" text-lg border-b-2 pb-5 mb-5">      <h1>Standort</h1>
+</div>
+      {checkListItems.map((item,index) => (
+        <div key={index} className="border-b-2 last:border-none">
+          <UserDetails img={item.img} name={item.name} email={item.email} />
+          <div className="flex items-center mb-4 shadow-md p-2">
+              <input
+                type="checkbox"
+                className="w-4 h-4 "
+              />
+              <label
+                htmlFor="default-checkbox"
+                className="ms-2 text-sm font-bold mr-3 "
+              >
+                Build prototypes without code
               </label>
-            ))}
-          </div>
+              <p className="text-[#0000008A]">
+                Sunt qui esse pariatur duis deserunt mollit dolore cillum minim
+                tempor enim.{" "}
+              </p>
+            </div>
+
+            <div className="flex items-center mb-4 shadow-md p-2">
+              <input
+                type="checkbox"
+                className="w-4 h-4 "
+              />
+              <label
+                htmlFor="default-checkbox"
+                className="ms-2 text-sm font-bold mr-3 "
+              >
+                Build prototypes without code
+              </label>
+              <p className="text-[#0000008A]">
+                Sunt qui esse pariatur duis deserunt mollit dolore cillum minim
+                tempor enim.{" "}
+              </p>
+            </div>
+
+            <div className="flex items-center mb-4 shadow-md p-2">
+              <input
+                type="checkbox"
+                className="w-4 h-4 "
+              />
+              <label
+                htmlFor="default-checkbox"
+                className="ms-2 text-sm font-bold mr-3 "
+              >
+                Build prototypes without code
+              </label>
+              <p className="text-[#0000008A]">
+                Sunt qui esse pariatur duis deserunt mollit dolore cillum minim
+                tempor enim.{" "}
+              </p>
+            </div>
+
+            <div className="flex items-center mb-4 shadow-md p-2">
+              <input
+                type="checkbox"
+                className="w-4 h-4 "
+              />
+              <label
+                htmlFor="default-checkbox"
+                className="ms-2 text-sm font-bold mr-3 "
+              >
+                Build prototypes without code
+              </label>
+              <p className="text-[#0000008A]">
+                Sunt qui esse pariatur duis deserunt mollit dolore cillum minim
+                tempor enim.{" "}
+              </p>
+            </div>
+          
+           
         </div>
       ))}
     </div>

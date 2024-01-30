@@ -54,7 +54,7 @@ const Modal1 = ({ isOpen, onClose }) => {
               </h1>
 
               <div className="bg-white p-5 rounded-[25px]">
-              <div className="flex items-center mb-4 shadow-md p-2">
+              <div className="flex items-center mb-4 shadow-md p-2 ">
               <input
                 id="default-checkbox"
                 type="checkbox"

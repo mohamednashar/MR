@@ -92,7 +92,7 @@ const Modal3 = ({ isOpen, onClose }) => {
                 </div>
 
                 <div className="mt-5 mb-10 p-5 flex flex-col ">
-                  <div className="bg-white p-2 mb-2">
+                  <div className="bg-white p-2 mb-2 flex items-center gap-3">
                     <input type="checkbox" id="first" />{" "}
                     <label htmlFor="first">
                       {" "}
@@ -105,9 +105,11 @@ const Modal3 = ({ isOpen, onClose }) => {
                       </span>
                     </label>
                   </div>
-                  <div className="bg-white p-2 mb-2">
-                    <input type="checkbox" id="second" />{" "}
-                    <label htmlFor="second">
+
+                  <div className="bg-white p-2 mb-2 flex items-center gap-3">
+                    <input type="checkbox" id="first" />{" "}
+                    <label htmlFor="first">
+                      {" "}
                       <span className="text-[#202124] font-bold">
                         Build prototypes without code
                       </span>
@@ -117,10 +119,12 @@ const Modal3 = ({ isOpen, onClose }) => {
                       </span>
                     </label>
                   </div>
-                  <div className="bg-white p-2 mb-2">
-                    <input type="checkbox" id="third" />{" "}
-                    <label htmlFor="third">
-                    <span className="text-[#202124] font-bold">
+
+                  <div className="bg-white p-2 mb-2 flex items-center gap-3">
+                    <input type="checkbox" id="first" />{" "}
+                    <label htmlFor="first">
+                      {" "}
+                      <span className="text-[#202124] font-bold">
                         Build prototypes without code
                       </span>
                       <span className="text-[#0000008A] mx-4">
@@ -129,10 +133,12 @@ const Modal3 = ({ isOpen, onClose }) => {
                       </span>
                     </label>
                   </div>
-                  <div className="bg-white p-2 mb-2">
-                    <input type="checkbox" id="fourth" />{" "}
-                    <label htmlFor="fourth">
-                    <span className="text-[#202124] font-bold">
+
+                  <div className="bg-white p-2 mb-2 flex items-center gap-3">
+                    <input type="checkbox" id="first" />{" "}
+                    <label htmlFor="first">
+                      {" "}
+                      <span className="text-[#202124] font-bold">
                         Build prototypes without code
                       </span>
                       <span className="text-[#0000008A] mx-4">
@@ -141,6 +147,8 @@ const Modal3 = ({ isOpen, onClose }) => {
                       </span>
                     </label>
                   </div>
+
+                
                 </div>
               </div>
 
