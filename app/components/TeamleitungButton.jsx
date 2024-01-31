@@ -1,5 +1,7 @@
 "use client"
 import React, { useState } from 'react';
+import CardTeamleitung from './CardTeamleitung';
+import Gesamtauftrag from './Gesamtauftrag';
 
 const TeamleitungButton = () => {
   const WIDTH = 50;
@@ -15,8 +17,15 @@ const TeamleitungButton = () => {
 
 
   return (
+    <>
+    {
+    active ==0 ?   <CardTeamleitung />:<Gesamtauftrag/>
+    
+    }
+ 
+
     <div
-    className='mb-7 font-bold'
+    className='mb-8 font-bold mt-8'
       style={{
         display: 'flex',
         justifyContent: 'center',
@@ -83,7 +92,10 @@ const TeamleitungButton = () => {
         </button>
        
       </div>
+     
     </div>
+ 
+    </>
   );
 };
 

@@ -35,7 +35,7 @@ function LeaderTeamleitung({
           <Image
             width={200}
             height={200}
-            class="rounded-[15px] w-[40px] h-[70px] object-cover  mr-4 "
+            class="rounded-[15px] w-[35px] h-[60px] object-cover  mr-4 "
             src={img}
             alt=""
           />
@@ -78,9 +78,10 @@ function LeaderTeamleitung({
                 />
               </svg>
             </button>
+            <div>
 
             <svg
-              className="cursor-pointer transition-all duration-200 hover:rotate-180"
+              className={`cursor-pointer transition-all duration-200 ${open ? 'rotate-180' : ''}`}
               onClick={toggleOpen}
               width="15"
               height="10"
@@ -93,6 +94,7 @@ function LeaderTeamleitung({
                 fill="#3AB3B3"
               />
             </svg>
+            </div>
           </div>
         </div>
       </div>
