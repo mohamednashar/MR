@@ -36,13 +36,13 @@ const Gesamtauftrag = () => {
     <>
       {items.map((item) => {
         return (
-          <div>
+          <div key={item.id}>
             <h1 className="text-center text-2xl text-[#2D3748] mb-5">
               Team {item.id}
             </h1>
 
             <div
-              key={item.id}
+              
               className="flex gap-6 flex-col bg-white border-l-4 border-[#0F6583] shadow-md w-[80%] p-5 mx-auto text-[#000000B0] mb-10 font-bold text-lg "
             >
               <div className="flex border-b-2">
