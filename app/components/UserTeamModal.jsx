@@ -1,7 +1,19 @@
 "use client";
 import Image from "next/image";
+import React, { useState } from "react";
+import {
+  Button,
+  Dialog,
+  DialogHeader,
+  DialogBody,
+  DialogFooter,
+} from "@material-tailwind/react";
+import UserTeamleitung from "./UserTeamleitung";
 
 function UserTeamModal({ img, name, email, icon }) {
+  const [openModal, setOpenModal] = useState(false);
+
+  const handleOpenModal = () => setOpenModal(!openModal);
   return (
     <div className=" w-full mx-auto bg-white border-b-2 last:border-b-0 ">
       <div className="flex w-full items-center justify-between bg-white py-2  cursor-default ">
@@ -18,73 +30,104 @@ function UserTeamModal({ img, name, email, icon }) {
               <p className="text-[#2D3748] font-bold">{name}</p>
               <p className="text-[#718096]">{email}</p>
             </div>
-           
           </div>
         </div>
 
         <div className="ml-44 ">
           <div className="flex items-center gap-5">
-           
-              {icon === "plus" ? (
-                <svg
-                  className="hover:rotate-90 transition-all duration-200"
-                  width="22"
-                  height="22"
-                  viewBox="0 0 24 25"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M22 13C15.1276 13 -5.48921 13 1.3832 13C5.53068 13 9.66516 13 13.8061 13"
-                    stroke="#3AB3B3"
-                    strokeWidth="3"
-                    strokeLinecap="round"
-                  />
-                  <path
-                    d="M12 2C12 9.18479 12 30.7387 12 23.5539C12 19.2179 12 14.8955 12 10.5663"
-                    stroke="#3AB3B3"
-                    strokeWidth="3"
-                    strokeLinecap="round"
-                  />
-                </svg>
-              ) : icon === "leader" ? (
-
-                <div className="flex items-center gap-6 rounded-full bg-white ">
-                  <div className="bg-[#F8F9FA] p-3 rounded-full">
-                  <svg
-                    width="25"
-                    height="25"
-                    viewBox="0 0 20 15"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M2.50844 12.6047C2.50844 10.9405 2.50844 9.27627 2.50844 7.61206C2.50844 7.0092 2.34591 6.14679 2.53073 5.56151C2.76211 4.82883 3.32393 4.10106 3.69717 3.42923C3.99576 2.89176 4.5426 2.62212 5.12364 2.5154C7.54555 2.07056 8.99737 2.7813 11.1118 4.10532C12.5604 5.01237 13.7692 5.86992 14.7226 7.30002C15.056 7.80018 15.3928 8.27583 15.7256 8.80821C15.8416 8.99376 16.5379 7.71813 16.6023 7.58234C16.7969 7.17148 16.9414 6.73902 17.1149 6.31932C17.2362 6.02602 17.296 5.18873 17.4864 5.44263C17.6543 5.66651 17.4864 6.00233 17.4864 6.28217C17.4864 7.04754 17.4879 7.81297 17.4567 8.5779C17.4391 9.00828 17.6689 10.339 16.9366 10.1604C14.7965 9.63842 13.0645 8.18805 11.0673 7.38917"
-                      stroke="#3AB3B3"
-                      stroke-width="3"
-                      stroke-linecap="round"
-                    />
-                  </svg>
-                  </div>
-                  <p className="text-[#68717B]">Teamleiter für Team 4</p>
+            {icon === "plus" ? (
+              <svg
+                className="hover:rotate-90 transition-all duration-200"
+                width="22"
+                height="22"
+                viewBox="0 0 24 25"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M22 13C15.1276 13 -5.48921 13 1.3832 13C5.53068 13 9.66516 13 13.8061 13"
+                  stroke="#3AB3B3"
+                  strokeWidth="3"
+                  strokeLinecap="round"
+                />
+                <path
+                  d="M12 2C12 9.18479 12 30.7387 12 23.5539C12 19.2179 12 14.8955 12 10.5663"
+                  stroke="#3AB3B3"
+                  strokeWidth="3"
+                  strokeLinecap="round"
+                />
+              </svg>
+            ) : icon === "leader" ? (
+              <div className="flex items-center gap-6 rounded-full bg-white ">
+                <div className="bg-[#F8F9FA] p-3 rounded-full">
+                  <button onClick={handleOpenModal}>
+                    <svg
+                      width="25"
+                      height="25"
+                      viewBox="0 0 20 15"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M2.50844 12.6047C2.50844 10.9405 2.50844 9.27627 2.50844 7.61206C2.50844 7.0092 2.34591 6.14679 2.53073 5.56151C2.76211 4.82883 3.32393 4.10106 3.69717 3.42923C3.99576 2.89176 4.5426 2.62212 5.12364 2.5154C7.54555 2.07056 8.99737 2.7813 11.1118 4.10532C12.5604 5.01237 13.7692 5.86992 14.7226 7.30002C15.056 7.80018 15.3928 8.27583 15.7256 8.80821C15.8416 8.99376 16.5379 7.71813 16.6023 7.58234C16.7969 7.17148 16.9414 6.73902 17.1149 6.31932C17.2362 6.02602 17.296 5.18873 17.4864 5.44263C17.6543 5.66651 17.4864 6.00233 17.4864 6.28217C17.4864 7.04754 17.4879 7.81297 17.4567 8.5779C17.4391 9.00828 17.6689 10.339 16.9366 10.1604C14.7965 9.63842 13.0645 8.18805 11.0673 7.38917"
+                        stroke="#3AB3B3"
+                        stroke-width="3"
+                        stroke-linecap="round"
+                      />
+                    </svg>
+                  </button>
                 </div>
-              ) : (
-                <svg
-                  width="24"
-                  height="4"
-                  viewBox="0 0 24 4"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M22 2C15.1276 2 -5.48921 2 1.3832 2C5.53068 2 9.66516 2 13.8061 2"
-                    stroke="#3AB3B3"
-                    strokeWidth="3"
-                    strokeLinecap="round"
+                <p className="text-[#68717B]">Teamleiter für Team 4</p>
+              </div>
+            ) : (
+              <svg
+                width="24"
+                height="4"
+                viewBox="0 0 24 4"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M22 2C15.1276 2 -5.48921 2 1.3832 2C5.53068 2 9.66516 2 13.8061 2"
+                  stroke="#3AB3B3"
+                  strokeWidth="3"
+                  strokeLinecap="round"
+                />
+              </svg>
+            )}
+
+            <Dialog
+              className="w-[600px] bg-[#ECEFF1] rounded-3xl min-h-[370px]"
+              open={openModal}
+              handler={handleOpenModal}
+            >
+              <DialogHeader className="bg-[#ECEFF1] rounded-t-3xl text-[#94A0B0] text-lg text-center ">
+                Der Teamleiter wird in einen regulären Mitarbeiter umgewandelt.
+              </DialogHeader>
+              <DialogBody className="bg-white text-[#94A0B0] text-lg text-center mx-3 mt-3 rounded-t-3xl">
+                Wählen Sie Teamleiter aus.
+              </DialogBody>
+              <DialogFooter className="bg-white mx-3 rounded-b-3xl flex flex-col justify-start">
+                <div className="hover:bg-[#3AB3B3] rounded-3xl w-full">
+                  <UserTeamleitung
+                    imguser={
+                      "https://images.unsplash.com/photo-1564564321837-a57b7070ac4f?q=80&w=2076&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    }
+                    nameuser={"Alexa Liras"}
+                    emailuser={"alexa@simmmple.com"}
                   />
-                </svg>
-              )}
-  
+                </div>
+                <div className="hover:bg-[#3AB3B3] rounded-3xl  w-full ">
+                  <UserTeamleitung
+                    imguser={
+                      "https://images.unsplash.com/photo-1564564321837-a57b7070ac4f?q=80&w=2076&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    }
+                    nameuser={"Alexa Liras"}
+                    emailuser={"alexa@simmmple.com"}
+                  />
+                </div>
+              </DialogFooter>
+            </Dialog>
           </div>
         </div>
       </div>

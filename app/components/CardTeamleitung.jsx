@@ -10,7 +10,6 @@ const CardTeamleitung = () => {
         <div className="border-b-2 py-2">
           <p className="text-[#156585] text-xl pb-4">Teamleitung</p>
         </div>
-     
 
         <LeaderTeamleitung
           img={
@@ -19,8 +18,6 @@ const CardTeamleitung = () => {
           name={"Alexa Liras"}
           email={"alexa@simmmple.com"}
           teamname={"Teamleiter für Team 1"}
-
-          
         />
         <LeaderTeamleitung
           img={
@@ -29,7 +26,6 @@ const CardTeamleitung = () => {
           name={"Alexa Liras"}
           email={"alexa@simmmple.com"}
           teamname={"Teamleiter für Team 2"}
-          
         />
         <LeaderTeamleitung
           img={
@@ -38,7 +34,6 @@ const CardTeamleitung = () => {
           name={"Alexa Liras"}
           email={"alexa@simmmple.com"}
           teamname={"Teamleiter für Team 3"}
-          
         />
         <LeaderTeamleitung
           img={
@@ -47,7 +42,6 @@ const CardTeamleitung = () => {
           name={"Alexa Liras"}
           email={"alexa@simmmple.com"}
           teamname={"Teamleiter für Team 4"}
-          
         />
         <LeaderTeamleitung
           img={
@@ -56,7 +50,6 @@ const CardTeamleitung = () => {
           name={"Alexa Liras"}
           email={"alexa@simmmple.com"}
           teamname={"Teamleiter für Team 5"}
-          
         />
         <LeaderTeamleitung
           img={
@@ -65,13 +58,7 @@ const CardTeamleitung = () => {
           name={"Alexa Liras"}
           email={"alexa@simmmple.com"}
           teamname={"Teamleiter für Team 6"}
-          
         />
-   
-        
-
-
-
       </div>
     </>
   );
