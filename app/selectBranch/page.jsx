@@ -18,7 +18,7 @@ const SelectBranch = () => {
       <div className=" bg-white p-4 md:w-[80%] mx-auto">
         <div className="w-80 ">
           <Select
-            label="Select Version"
+            label="Zweig auswählen"
             animate={{
               mount: { y: 0 },
               unmount: { y: 25 },
